@@ -1,0 +1,22 @@
+mat-expansion-panel{
+  margin-top:1em;
+  border-radius:1rem;
+  width:400px;
+}
+
+.info-text{
+text-align:center;
+}
+#prakriti{
+  border-radius: 2rem;
+}
+/* #map {
+  height: 100%;
+} */
+
+agm-map{
+  width:400px;
+  height:400px;
+}
+
+

@@ -1,0 +1,29 @@
+
+<div class ="row" style="display: flex;">
+  <div class="col-md-6">
+    <mat-accordion multi="true" *ngIf="blogs.length>0">
+      <mat-expansion-panel *ngFor="let blog of blogs">
+        <mat-expansion-panel-header>
+         latitude: {{blog.latitude}}   &nbsp;&nbsp;&nbsp;     longitude:{{blog.longitude}}
+        </mat-expansion-panel-header>
+
+       <img src="{{blog.image}}" alt="" style="width: 350px;height:170px">
+
+      </mat-expansion-panel>
+    </mat-accordion>
+
+
+
+<p  class=" info-text mat-body-1" *ngIf="blogs.length<=0" >No posts added yet </p>
+
+<!-- <mat-divider [vertical]="true"></mat-divider> -->
+</div>
+<div class="col-md-6" style="margin-left:25px ;margin-top: 0px;">
+  <!-- <agm-map [latitude]="locations[0].lat" [longitude]="locations[0].lng" (mapClick)="mapClick($event)"> -->
+    <agm-map  [latitude]="locations[0].lat" [longitude] ="locations[0].lng">
+    <agm-marker *ngFor="let location of locations" [latitude]="location.lat" [longitude]="location.lng">
+    </agm-marker>
+  </agm-map>
+</div>
+</div>
+

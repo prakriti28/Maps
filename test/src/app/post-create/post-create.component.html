@@ -1,0 +1,49 @@
+
+<mat-card>
+   <form (submit)="onAddPost(postForm)" #postForm="ngForm">
+
+
+    <mat-form-field>
+      <input
+        matInput type="number"
+        name="latitude"
+      ngModel
+      required
+      minlength="3"
+        placeholder="latitude"
+      #title="ngModel">
+
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput type="number"
+        name="longitude"
+        ngModel
+        required
+        placeholder="longitude"
+        #content="ngModel">
+
+
+    </mat-form-field>
+    <mat-form-field>
+      <textarea
+        matInput rows="2"
+        name="image"
+        ngModel
+        required
+        placeholder="image url"
+        #content="ngModel">
+      </textarea>
+
+    </mat-form-field>
+    <button
+      mat-raised-button
+      color="warn"
+      type="submit"> SUBMIT
+    </button>
+  </form>
+</mat-card>
+
+
+
+
